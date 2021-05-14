@@ -1,0 +1,3 @@
+/*
+write a recursive function of generating all permutations of an input string
+*/

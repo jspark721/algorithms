@@ -12,3 +12,39 @@ example: for amount=4 (4 cents) and denominations=[1,2,3] (1c,2c, 3 cents), your
 4. 2c,2c
 
 */
+
+//edge case - some will come out 0, if the amount is less than the value of the denominations
+
+function makeChange(amountLeft, denominations, currentIndex = 0) {
+  //base cases - if we hit the amount spot on, just return 1!
+  if (amountLeft === 0) return 1;
+
+  //we overshot the amount left (used too many coins)
+  if (amountLeft < 0) return 0;
+
+  //we're out of denominations
+  if (currentIndex === denominations.length) return 0;
+
+  console.log(
+    `checking ways to make ${amountLeft} with [${denominations.slice(
+      currentIndex
+    )}]`
+  );
+
+  //choose a current coin
+  const currentCoin = denominations[currentIndex];
+
+  //see how many possibilities we can get for each number of times to use currentCoin
+  let numberOfPossibilities = 0;
+  while (amountLeft >= 0) {
+    numberOfPossibilities += makeChange(
+      amountLeft,
+      denominations,
+      currentIndex + 1
+    );
+    amountLeft -= currentCoin;
+  }
+  return numberOfPossibilities;
+}
+
+console.log(makeChange(4, [1, 2, 3]));

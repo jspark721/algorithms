@@ -25,3 +25,57 @@ optimize
 time complexity:
 space complexity: 
 */
+
+const spiralMatrix = (matrix) => {
+  const resultArray = [];
+
+  if (matrix.length === 0) {
+    return resultArray;
+  }
+
+  //restricting boundaries of the matrix
+  let top = 0;
+  let left = 0;
+  let bottom = matrix.length - 1; //last row in matrix
+  let right = matrix[0].length - 1; //last column in matrix
+
+  while (top <= bottom && left <= right) {
+    //walk the top row
+    for (let col = left; col <= right; col++) {
+      resultArray.push(matrix[top][col]);
+    }
+    //move to the next top
+    top++;
+
+    //walk the right column
+    for (let row = top; row <= bottom; row++) {
+      resultArray.push(matrix[row][right]);
+    }
+    //move to the left;
+    right--;
+    //if center is a horizontal line, prevent bottom from rereading what the top already read
+    if (top <= bottom) {
+      //walk bottom row
+      for (let col = right; col >= left; col--) {
+        resultArray.push(matrix[bottom][col]);
+      }
+    }
+    bottom--;
+    //if center is a vertical line, prevent the left from rereading what the right column already read
+    if (left <= right) {
+      for (let row = bottom; row >= top; row--) {
+        resultArray.push(matrix[row][left]);
+      }
+      left++;
+    }
+  }
+
+  return resultArray;
+};
+
+let matrix = [
+  [1, 2, 3],
+  [8, 9, 4],
+  [7, 6, 5],
+];
+console.log(spiralMatrix(matrix));

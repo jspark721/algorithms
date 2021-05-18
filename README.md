@@ -1,7 +1,9 @@
 # Algorithms
+
 Algorithm problems &amp; solutions all in JavaScript
 
-### Practicing algorithm problems 
+### Practicing algorithm problems
+
 Keep up to date on technical coding problem solving skills
 
 🍏- easy problem
@@ -9,15 +11,17 @@ Keep up to date on technical coding problem solving skills
 🍎- hard problem
 
 #### BackToBackSWE
+
 **Arrays**
+
 - [ ] Rotating a 2D Matrix (🍏)
 - [ ] The 3-Sum Problem (🍏)
 - [ ] Enumerate All Primes to N (🍏)
 - [ ] Valid Sudoku (🍏)
-- [ ] Spiral Traversal of a Matrix (🍊)
+- [x] Spiral Traversal of a Matrix (🍊)
 - [ ] Count Subarrays That Sum To K (🍊)
 - [ ] Next Permutation (🍎)
-**Stacks & Queues**
+      **Stacks & Queues**
 - [ ] The Balanced Parentheses Problem (🍏)
 - [ ] Compute Buildings with a Sunset View (🍏)
 - [ ] Implement a Circular Queue (🍊)
@@ -27,6 +31,7 @@ Keep up to date on technical coding problem solving skills
 - [ ] Implement Text Editor Undo Redo (🍎)
 
 **Trees**
+
 - [ ] Test if a Binary Tree is Symmetric (🍏)
 - [ ] Sum Root to Leaf Paths (🍏)
 - [ ] Test a Tree for the BST Property (🍏)
@@ -46,8 +51,9 @@ Keep up to date on technical coding problem solving skills
 
 #### Interview Cake
 
-**Dynamic programming and recursion** 
-- [ ] Recursive String Permutations 
+**Dynamic programming and recursion**
+
+- [ ] Recursive String Permutations
 - [ ] Compute the nth Fibonacci Number
 - [x] Making Change
 - [ ] The Cake Thief
